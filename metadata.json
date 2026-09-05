@@ -1,0 +1,6 @@
+{
+  "name": "Camberwell Junction Dental",
+  "description": "Premium, modern website and online appointment booking system for Camberwell Junction Dental in Camberwell VIC, Australia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

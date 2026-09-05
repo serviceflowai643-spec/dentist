@@ -1,0 +1,331 @@
+import { Dentist, ServiceItem, OpeningHourItem, PatientReview } from '../types';
+
+export const PRACTICE_INFO = {
+  name: 'Camberwell Junction Dental',
+  tagline: 'Healthy Smiles. Confident Care.',
+  subheading: 'Comprehensive dental care for individuals and families in the heart of Camberwell.',
+  address: {
+    street: '1/2 Prospect Hill Road',
+    suburb: 'Camberwell',
+    state: 'VIC',
+    postcode: '3124',
+    country: 'Australia',
+    full: '1/2 Prospect Hill Road, Camberwell VIC 3124, Australia',
+    landmarks: 'Located directly at Camberwell Junction, steps from tram stops and Camberwell Railway Station.',
+    googleMapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d145.05697!3d-37.82772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6422b5efc1cbb%3A0x959e7a8370d97036!2s1%2F2%20Prospect%20Hill%20Rd%2C%20Camberwell%20VIC%203124!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau',
+    googleMapsDirectLink: 'https://maps.google.com/?q=1/2+Prospect+Hill+Road,+Camberwell+VIC+3124,+Australia',
+  },
+  phone: '(03) 9882 1187',
+  phoneClean: '0398821187',
+  phoneInternational: '+61398821187',
+  email: 'camberwelljunctiondental@gmail.com',
+  rating: {
+    score: 4.7,
+    maxScore: 5.0,
+    reviewCount: 98,
+    badgeText: '4.7/5 patient rating',
+  },
+};
+
+export const OPENING_HOURS: OpeningHourItem[] = [
+  { day: 'Monday', hours: '8:15 AM – 5:15 PM', isOpen: true },
+  { day: 'Tuesday', hours: '8:15 AM – 5:15 PM', isOpen: true },
+  { day: 'Wednesday', hours: '8:15 AM – 5:15 PM', isOpen: true },
+  { day: 'Thursday', hours: '8:15 AM – 5:15 PM', isOpen: true },
+  { day: 'Friday', hours: '8:15 AM – 5:15 PM', isOpen: true },
+  { day: 'Saturday', hours: '8:45 AM – 3:30 PM', isOpen: true },
+  { day: 'Sunday', hours: 'Closed', isOpen: false },
+];
+
+export const DENTISTS: Dentist[] = [
+  {
+    id: 'dr-jessica-li',
+    name: 'Dr Jessica Li',
+    role: 'Principal Dentist',
+    image: '/images/doctors/jessica-li.jpg',
+    bio: 'Leading the team at Camberwell Junction Dental, Dr Jessica Li focuses on delivering gentle, patient-centred general and preventive dental care tailored to individuals and families.',
+    availableDays: 'Monday – Friday',
+  },
+  {
+    id: 'dr-michael-chan',
+    name: 'Dr Michael Chan',
+    role: 'Dentist',
+    image: '/images/doctors/michael-chan.jpg',
+    bio: 'Dr Michael Chan provides comprehensive general dentistry with a warm, caring approach that helps patients feel relaxed and informed throughout their treatment.',
+    availableDays: 'Monday, Wednesday, Friday',
+  },
+  {
+    id: 'dr-ronald-chan',
+    name: 'Dr Ronald Chan',
+    role: 'Dentist',
+    image: '/images/doctors/ronald-chan.jpg',
+    bio: 'Dr Ronald Chan is dedicated to high-quality general dental treatments and restorative solutions, prioritizing long-term oral health and patient comfort.',
+    availableDays: 'Tuesday, Thursday, Saturday',
+  },
+  {
+    id: 'dr-linda-huang',
+    name: 'Dr Linda Huang',
+    role: 'Dentist',
+    image: '/images/doctors/linda-huang.jpg',
+    bio: 'Dr Linda Huang brings a gentle and thorough approach to family dentistry, with a strong focus on preventive care and supportive treatments for patients of all ages.',
+    availableDays: 'Monday – Thursday',
+  },
+  {
+    id: 'dr-zhi-li-lau',
+    name: 'Dr Zhi Li (Lili) Lau',
+    role: 'Dentist',
+    image: '/images/doctors/lili-lau.jpg',
+    bio: 'Dr Zhi Li (Lili) Lau is committed to compassionate dental care, taking time to understand patient concerns and creating comfortable treatment experiences.',
+    availableDays: 'Tuesday, Friday, Saturday',
+  },
+  {
+    id: 'dr-chris-choi',
+    name: 'Dr Chris Choi',
+    role: 'Dentist',
+    image: '/images/doctors/chris-choi.jpg',
+    bio: 'Dr Chris Choi offers comprehensive dental examinations, restorative procedures, and cosmetic smile solutions designed to preserve natural tooth structure.',
+    availableDays: 'Wednesday – Saturday',
+  },
+];
+
+export const SERVICES: ServiceItem[] = [
+  {
+    id: 'general-dentistry',
+    title: 'General Dentistry',
+    shortDesc: 'Routine check-ups, digital radiography, gentle cleanings, and preventive assessments to maintain optimal oral health.',
+    fullDesc: 'Our general dentistry services are the cornerstone of a healthy smile. We provide comprehensive oral examinations, gentle professional hygiene cleans, low-dose digital x-rays, and customized preventative treatment plans for patients at every stage of life.',
+    iconName: 'Stethoscope',
+    category: 'General',
+    benefits: ['Comprehensive check-up & clean', 'Early detection of oral health issues', 'Gentle, personalized treatment plans', 'Preservation of natural teeth'],
+    durationEstimate: '30 – 45 mins',
+  },
+  {
+    id: 'childrens-dentistry',
+    title: "Children's Dentistry",
+    shortDesc: 'Gentle, positive dental visits designed to build lifelong healthy habits in a friendly, supportive environment.',
+    fullDesc: 'We understand that positive early experiences shape a child’s attitude toward dental visits for life. Our team provides gentle examinations, dietary advice, protective fluoride treatments, and fissure sealants in a welcoming environment.',
+    iconName: 'Baby',
+    category: 'Preventive',
+    benefits: ['Positive & supportive atmosphere', 'Child Dental Benefits Schedule (CDBS) accepted', 'Preventive care & fissure sealants', 'Habit & dietary coaching for families'],
+    durationEstimate: '30 mins',
+  },
+  {
+    id: 'cosmetic-dentistry',
+    title: 'Cosmetic Dentistry',
+    shortDesc: 'Tailored aesthetic treatments to enhance the appearance, symmetry, and natural brightness of your smile.',
+    fullDesc: 'Cosmetic dentistry combines artistic care with modern dental techniques to help you feel confident about your smile. We provide personalized aesthetic assessments to address discoloration, minor gaps, chips, and tooth shape.',
+    iconName: 'Sparkles',
+    category: 'Cosmetic',
+    benefits: ['Custom smile design consultations', 'Minimally invasive options', 'Natural, balanced aesthetic results', 'Tailored to your facial features'],
+    durationEstimate: 'Consultation + Procedure',
+  },
+  {
+    id: 'dental-implants',
+    title: 'Dental Implants',
+    shortDesc: 'Permanent, stable replacement solutions for missing teeth that look, feel, and function like natural teeth.',
+    fullDesc: 'Dental implants provide a secure and durable foundation for single crowns, multi-unit bridges, or stabilized dentures. They help preserve jawbone health and restore natural chewing ability with excellent longevity.',
+    iconName: 'Anchor',
+    category: 'Restorative',
+    benefits: ['Look, feel, and function like natural teeth', 'Helps prevent adjacent teeth from shifting', 'Supports bone density & facial profile', 'Long-lasting restorative solution'],
+    durationEstimate: 'Multi-stage assessment',
+  },
+  {
+    id: 'teeth-whitening',
+    title: 'Teeth Whitening',
+    shortDesc: 'Professional whitening treatments safely formulated to lighten stains and brighten your smile.',
+    fullDesc: 'Professional teeth whitening under dental supervision is a safe and effective way to remove stains caused by tea, coffee, wine, and natural aging. We offer tailored whitening solutions for noticeable, reliable results.',
+    iconName: 'Sun',
+    category: 'Cosmetic',
+    benefits: ['Safe for tooth enamel & gums', 'Removes deep surface stains', 'Tailored shade recommendations', 'Fast, radiant smile enhancement'],
+    durationEstimate: '45 – 60 mins',
+  },
+  {
+    id: 'wisdom-teeth',
+    title: 'Wisdom Teeth Treatment',
+    shortDesc: 'Careful assessment and gentle management of impacted or problematic third molars.',
+    fullDesc: 'Wisdom teeth often emerge without sufficient jaw space, leading to impaction, crowding, or localized gum inflammation. We provide digital imaging, pain relief, and gentle extraction options with thorough aftercare support.',
+    iconName: 'Activity',
+    category: 'Specialised',
+    benefits: ['Detailed x-ray assessment', 'Relief from pain and inflammation', 'Gentle, modern surgical techniques', 'Comprehensive post-treatment care'],
+    durationEstimate: 'Consultation & treatment plan',
+  },
+  {
+    id: 'root-canal-treatment',
+    title: 'Root Canal Treatment',
+    shortDesc: 'Relieve pain and save severely damaged or infected teeth with modern endodontic care.',
+    fullDesc: 'Root canal therapy is designed to eliminate infection and save a natural tooth that would otherwise require extraction. Using modern numbing techniques and precision instruments, the procedure is as comfortable as a standard filling.',
+    iconName: 'HeartPulse',
+    category: 'Restorative',
+    benefits: ['Relief from toothache & sensitivity', 'Saves the natural tooth from extraction', 'Restores full biting & chewing function', 'Modern, gentle anaesthetic techniques'],
+    durationEstimate: '60 – 90 mins (1–2 visits)',
+  },
+  {
+    id: 'crowns-and-veneers',
+    title: 'Crowns & Veneers',
+    shortDesc: 'Custom-crafted porcelain crowns and veneers to restore strength, protection, and refined aesthetics.',
+    fullDesc: 'Crowns provide full-coverage reinforcement for weakened, cracked, or heavily restored teeth, while porcelain veneers create a refined, balanced front smile. Each restoration is custom shade-matched for seamless harmony.',
+    iconName: 'Gem',
+    category: 'Restorative',
+    benefits: ['Restores structural strength to damaged teeth', 'Custom ceramic shade matching', 'Long-lasting stain resistance', 'Seamless, lifelike finish'],
+    durationEstimate: '2 appointments',
+  },
+  {
+    id: 'dentures',
+    title: 'Dentures',
+    shortDesc: 'Comfortable, natural-looking partial and full dentures to restore speech, chewing, and smile fullness.',
+    fullDesc: 'Modern dentures are lighter, more comfortable, and more natural in appearance than ever before. We craft custom full and partial dentures designed to fit securely, support your facial contours, and restore everyday chewing ease.',
+    iconName: 'Smile',
+    category: 'Restorative',
+    benefits: ['Custom-moulded for optimal fit & comfort', 'Partial & full arch solutions', 'Restores clear speech & chewing ability', 'Supports natural facial structure'],
+    durationEstimate: 'Custom fitting series',
+  },
+  {
+    id: 'gum-disease-treatment',
+    title: 'Gum Disease Treatment',
+    shortDesc: 'Targeted periodontal therapies to halt inflammation, treat bleeding gums, and protect bone support.',
+    fullDesc: 'Healthy gums are the foundation of healthy teeth. Our periodontal therapies address early gingivitis and progressive periodontitis through targeted treatments, deep biofilm removal, and ongoing maintenance regimens.',
+    iconName: 'ShieldAlert',
+    category: 'Preventive',
+    benefits: ['Halts bleeding & localized swelling', 'Protects supporting jawbone & tooth stability', 'Eliminates persistent bad breath (halitosis)', 'Comprehensive periodontal maintenance'],
+    durationEstimate: '45 mins',
+  },
+  {
+    id: 'scaling-and-root-planing',
+    title: 'Scaling & Root Planing',
+    shortDesc: 'Deep ultrasonic and hand cleaning beneath the gumline to remove hardened calculus and smooth root surfaces.',
+    fullDesc: 'Scaling and root planing is a specialized deep cleaning procedure that removes stubborn plaque, tartar (calculus), and bacteria from below the gumline. Smoothing the tooth root promotes gum re-attachment and reduces periodontal pockets.',
+    iconName: 'Layers',
+    category: 'Preventive',
+    benefits: ['Removes hardened calculus below the gumline', 'Assists gum tissue in healing & re-attaching', 'Reduces gum pocket depths', 'Gentle local comfort measures'],
+    durationEstimate: '45 – 60 mins',
+  },
+  {
+    id: 'fissure-sealants',
+    title: 'Fissure Sealants',
+    shortDesc: 'A protective, painless resin coating applied to the deep grooves of molars to prevent decay.',
+    fullDesc: 'Fissure sealants are thin, invisible protective coatings applied to the chewing surfaces of back teeth where food particles and bacteria frequently get trapped. It is a quick, painless procedure especially beneficial for children and teenagers.',
+    iconName: 'ShieldCheck',
+    category: 'Preventive',
+    benefits: ['Painless, quick application without drilling', 'Highly effective cavity prevention for molars', 'Smooths deep grooves for easier brushing', 'Ideal for young patients & permanent molars'],
+    durationEstimate: '15 – 25 mins',
+  },
+];
+
+export const WHY_CHOOSE_US_CARDS = [
+  {
+    number: '01',
+    title: 'Experienced Team',
+    desc: 'Our dedicated team of six dentists brings a collaborative approach to general, preventive, and restorative dental care for patients of all ages.',
+    icon: 'Users',
+  },
+  {
+    number: '02',
+    title: 'Comprehensive Dental Care',
+    desc: 'From routine check-ups and hygiene to complex crown restorations, children’s dentistry, and dental implants, we cover your complete oral health journey.',
+    icon: 'CheckCircle2',
+  },
+  {
+    number: '03',
+    title: 'Family Friendly',
+    desc: 'A warm, calming, and considerate atmosphere designed to make patients of all generations feel completely at ease from the moment they step through our doors.',
+    icon: 'HeartHandshake',
+  },
+  {
+    number: '04',
+    title: 'Patient Focused',
+    desc: 'We take the time to listen, explain every treatment option clearly with upfront transparent communication, and prioritize your long-term oral well-being.',
+    icon: 'SmilePlus',
+  },
+];
+
+export const PATIENT_JOURNEY_STEPS = [
+  {
+    step: '01',
+    title: 'Book Your Appointment',
+    desc: 'Schedule your visit online through our convenient booking request system or call our friendly reception team at (03) 9882 1187.',
+  },
+  {
+    step: '02',
+    title: 'Meet Your Dentist',
+    desc: 'Enjoy a warm welcome at our Camberwell clinic. Your dentist will listen to your goals, review your oral health history, and conduct a gentle examination.',
+  },
+  {
+    step: '03',
+    title: 'Receive Personalised Care',
+    desc: 'We tailor every treatment to your unique needs, explaining all procedures clearly with a focus on maximum comfort, gentle touch, and precision.',
+  },
+  {
+    step: '04',
+    title: 'Maintain Your Healthy Smile',
+    desc: 'Leave with a tailored home care plan and schedule regular check-ups to preserve healthy teeth and confident smiles for years to come.',
+  },
+];
+
+export const PATIENT_REVIEWS: PatientReview[] = [
+  {
+    id: 'rev-1',
+    author: 'Patient Review',
+    rating: 5,
+    date: 'Recent Google Review',
+    source: 'Google Verified Review',
+    text: 'Camberwell Junction Dental is fantastic. The team is warm, gentle, and very thorough. The clinic is clean and modern, and the dentists always take time to explain everything clearly.',
+    verified: true,
+  },
+  {
+    id: 'rev-2',
+    author: 'Patient Review',
+    rating: 5,
+    date: 'Recent Google Review',
+    source: 'Google Verified Review',
+    text: 'Our whole family has been coming here for years. They are wonderful with children, very calming for nervous patients, and consistently provide professional, attentive care.',
+    verified: true,
+  },
+  {
+    id: 'rev-3',
+    author: 'Patient Review',
+    rating: 5,
+    date: 'Recent Google Review',
+    source: 'Google Verified Review',
+    text: 'Excellent practice in Camberwell. Punctual, friendly staff, and the dentist was extremely gentle during my clean and check-up. Booking was straightforward and pleasant.',
+    verified: true,
+  },
+  {
+    id: 'rev-4',
+    author: 'Patient Review',
+    rating: 5,
+    date: 'Recent Google Review',
+    source: 'Google Verified Review',
+    text: 'Highly recommend Camberwell Junction Dental. Great location near the junction, parking nearby is easy, and the dental care is second to none.',
+    verified: true,
+  },
+];
+
+export const TRUST_STRIP_ITEMS = [
+  { icon: 'Award', title: 'Experienced Dental Team', subtitle: '6 dedicated practitioners' },
+  { icon: 'Heart', title: 'Family Friendly Care', subtitle: 'Welcoming all generations' },
+  { icon: 'ShieldCheck', title: 'Comprehensive Services', subtitle: 'General to specialised care' },
+  { icon: 'MapPin', title: 'Convenient Camberwell Location', subtitle: '1/2 Prospect Hill Road' },
+];
+
+export const PATIENT_INFO_ITEMS = [
+  {
+    title: 'Your First Visit',
+    content: 'Please arrive 5–10 minutes early to complete a short health questionnaire. We will take comprehensive digital images if needed, check your teeth and gums, and discuss your oral health goals.',
+  },
+  {
+    title: 'Health Funds & HICAPS',
+    content: 'We provide on-the-spot HICAPS electronic claiming for all major Australian private health funds (Bupa, Medibank, HCF, NIB, CBHS, Teachers Health, and more). Simply bring your health fund card or digital app.',
+  },
+  {
+    title: 'Child Dental Benefits Schedule (CDBS)',
+    content: 'Eligible children aged 0–17 may receive up to $1,095 in government-funded basic dental services over two calendar years under Medicare CDBS. Contact us to check eligibility.',
+  },
+  {
+    title: 'Location & Parking',
+    content: 'Conveniently situated at 1/2 Prospect Hill Road, right at Camberwell Junction. Street parking and multi-level council car parks (including The Well shopping centre) are just moments away. Camberwell Station and Trams 70 & 75 are within 2 minutes walk.',
+  },
+  {
+    title: 'Payment Options',
+    content: 'We accept EFTPOS, Visa, MasterCard, and cash. Flexible payment plans and transparent quotes are provided prior to starting any major treatment.',
+  },
+];
